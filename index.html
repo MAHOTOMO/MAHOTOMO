@@ -15,7 +15,16 @@
 
 <style>
 
-
+    body {
+      background-image: url('bg.png');
+      background-attachment: fixed;
+    }
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll !important;
+        background-size: cover;
+      }
+    }
 
 
 .outer-game-box {
