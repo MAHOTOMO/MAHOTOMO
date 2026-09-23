@@ -1,0 +1,68 @@
+body { 
+    background-color: transparent; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+ 
+    height: 100vh; 
+    
+    margin: 0; 
+    user-select: none; 
+    overflow: hidden; 
+    font-family: 'Noto Serif JP', serif; 
+}
+
+#game-container { 
+
+    width: 100%; 
+    height: 100%; 
+    
+
+    aspect-ratio: 2622 / 1206; 
+    
+    background-image: url('背景2.png'); 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+    overflow: hidden; 
+}
+.character-slot { position: absolute; height: 150%; bottom: -50%; width: auto; object-fit: contain; opacity: 0; transition: opacity 0.3s, filter 0.3s, transform 0.2s ease-out; }
+#char-left { left: 10%; } #char-center { left: 50%; transform: translateX(-50%); } #char-right { right: 10%; }
+
+#message-window { position: absolute; bottom: 0%; left: 50%; transform: translateX(-50%); width: 100%; height: 35%; background-image: url('台詞枠.png'); background-size: 100% 100%; cursor: pointer; box-sizing: border-box; z-index: 2; padding: 3% 25% 4% 25%; }
+#speaker-name { font-weight: 600; font-size: 2.2vw; margin-bottom: 0.5vw; text-shadow: 2px 2px 3px rgba(0,0,0,0.4), -2px -2px 3px rgba(0,0,0,0.4), 2px -2px 3px rgba(0,0,0,0.4), -2px -2px 3px rgba(0,0,0,0.4); }
+#message-text { font-weight: 200; font-size: 1.8vw; line-height: 1.5; margin: 0; white-space: pre-wrap; text-shadow: 2px 2px 3px rgba(0,0,0,0.4), -2px -2px 3px rgba(0,0,0,0.4), 2px -2px 3px rgba(0,0,0,0.4), -2px -2px 3px rgba(0,0,0,0.4); }
+#next-arrow { position: absolute; bottom: 12%; right: 25%; font-size: 1.4vw; display: none; animation: blink 0.8s infinite alternate; }
+@keyframes blink { 0% { opacity: 0.2; } 100% { opacity: 1; } }
+
+
+#menu-area { 
+    position: absolute; 
+    top: 3%; 
+    right: 6%; 
+    z-index: 5; 
+    width: 5vw; 
+    height: 5vw; 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#menu { display: flex; flex-direction: row-reverse; gap: 0.5vw; align-items: center; width: 100%; height: 100%; }
+.m-btn { cursor: pointer; box-sizing: border-box; border: none; background-color: transparent; background-size: contain; background-repeat: no-repeat; background-position: center; width: 5vw; height: auto; aspect-ratio: 1 / 1; flex-shrink: 0; }
+
+#b-main { background-image: url('メニューボタン.png'); }
+#b-auto { background-image: url('オートボタン.png'); }
+#b-skip { background-image: url('スキップボタン.png'); }
+#b-auto.active { background-image: url('オートボタン_on.png'); filter: brightness(1.4); }
+#b-skip.active { background-image: url('スキップボタン_on.png'); filter: brightness(1.4); }
+
+.sub-menu { opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
+.sub-menu.show { opacity: 1; pointer-events: auto; }
+
+#fade-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 0; pointer-events: none; z-index: 10; transition: opacity 1.5s ease; }
+#retry-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 1.5vw 4vw; font-size: 2vw; font-family: inherit; font-weight: 300; color: white; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.3); cursor: pointer; z-index: 11; display: none; opacity: 0; transition: opacity 0.8s, background-color 0.3s; letter-spacing: 0.2em; }
+#retry-btn:hover { background: rgba(255,255,255,0.15); border-color: white; }

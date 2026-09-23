@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>日常会話</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Serif+JP:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+
+    <div id="menu-area">
+        <div id="menu">
+            <button id="b-main" class="m-btn" onclick="tMenu(event)"></button>
+            <button id="b-auto" class="m-btn sub-menu" onclick="tAuto(event)"></button>
+            <button id="b-skip" class="m-btn sub-menu" onclick="tSkip(event)"></button>
+        </div>
+    </div>
+    <div id="character-layer">
+        <img id="char-left" class="character-slot" src="" alt="">
+        <img id="char-center" class="character-slot" src="" alt="">
+        <img id="char-right" class="character-slot" src="" alt="">
+    </div>
+    <div id="message-window" onclick="clickWin(true)">
+        <div id="speaker-name"><br></div>
+        <p id="message-text">クリックして会話をスタート</p>
+        <div id="next-arrow">▼</div>
+    </div>
+    <div id="fade-overlay"></div>
+    <button id="retry-btn" onclick="resetGame()">もう一度見る</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
