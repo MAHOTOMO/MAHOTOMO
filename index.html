@@ -330,7 +330,30 @@ body {
 }
 
 
+body {
+  margin: 0;
+  padding: 0;
+  
+
+  font-family: 'Noto Serif JP', serif;
+  
+
+  font-weight: 300;}
+
+h1 {
+  font-size: clamp(24px, 4.5vw, 48px);
+  
+  text-align: center;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 20px;}
+
 </style>
+
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;700&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -360,12 +383,13 @@ body {
 <ol>
 
   <li><a href="#story">ストーリー</a></li>
+  <li><a href="#kv">キービジュアル</a></li>
   <li><a href="#character">キャラクター</a></li>
   <li><a href="#chart">相関図</a></li>
-  <li><a href="#illustration">一枚絵</a></li>
-  <li><a href="#background">背景</a></li>
-  <li><a href="#ui-design">UIデザイン</a></li>
+  <li><a href="#illustration">スチルイラスト</a></li>
   <li><a href="#monster">クリーチャーデザイン</a></li>
+  <li><a href="#ui-design">UIデザイン</a></li>
+  <li><a href="#background">背景</a></li>
   <li><a href="#stamp">LINEスタンプ</a></li>
 
 </ol>
@@ -397,6 +421,14 @@ body {
 そして彼らの未来の先にある運命を<br>
 共に見届けましょう。
 </p>
+
+<hr>
+
+<h1 id="kv">キービジュアル</h1>
+
+<p><img src="KV.png" alt="KV" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb"></p>
+
+
 
 <hr>
 
@@ -433,20 +465,29 @@ body {
   <img src="武器集合.png" alt="集合イラスト" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb">
 </p>
 
+<br>
+
+<p>
+  <img src="制服.png" alt="制服デザイン" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb">
+</p>
+
 
 <br>
 <br>
+
+<hr>
+
 <br>
 <p>
 <img  id="chart" src="相関図.png" alt="相関図" style="max-width: 100%; height: auto; "class="scroll-img gallery-thumb" id="chart">
 </p>
+<br>
 
 
 <hr>
 
 <br>
-<br>
-<h1 id="illustration">一枚絵</h1>
+<h1 id="illustration">スチルイラスト</h1>
 <br>
 
 
@@ -466,19 +507,26 @@ body {
 
 
 <hr>
-<h1 id="background">背景</h1>
-<p><img src="背景.png" alt="背景1" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb"></p>
+<h1 id="monster">クリーチャーデザイン</h1>
+<dr>
+<p><img src="クリーチャー詳細.png" alt="クリーチャー紹介" style="max-width: 100%; height: auto;" class="scroll-img"></p>
+
 
 <hr>
 <h1 id="ui-design">UI</h1>
 <p><img src="ホーム画面UI.png" alt="ホーム画面UI" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb"></p>
+
+<p><img src="KV(UI).png" alt="スタート画面UI" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb"></p>
+
+<!--<p><img src="battle.png" alt="戦闘UI" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb"></p>-->
+
 
 
 <p>
 
 <div class="outer-game-box">
 
-    <!-- ゲーム画面の箱（比率をキープする窓） -->
+
     <div class="game-wrapper">
         <iframe src="日常会話.html" id="game-frame" scrolling="no"></iframe>
     </div>
@@ -492,9 +540,8 @@ body {
 
 
 <hr>
-<h1 id="monster">クリーチャーデザイン</h1>
-<dr>
-<p><img src="クリーチャー詳細.png" alt="クリーチャー紹介" style="max-width: 100%; height: auto;" class="scroll-img"></p>
+<h1 id="background">背景</h1>
+<p><img src="背景.png" alt="背景1" style="max-width: 100%; height: auto;" class="scroll-img gallery-thumb"></p>
 
 
 
